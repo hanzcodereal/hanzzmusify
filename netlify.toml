@@ -1,0 +1,71 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[functions]
+  directory = "api"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/search"
+  to = "/.netlify/functions/search"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/lyrics"
+  to = "/.netlify/functions/lyrics"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/artist"
+  to = "/.netlify/functions/artist"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/suggest"
+  to = "/.netlify/functions/suggest"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/player.js"
+  to = "/public/player.js"
+  status = 200
+
+[[redirects]]
+  from = "/home.js"
+  to = "/public/home.js"
+  status = 200
+
+[[redirects]]
+  from = "/search.js"
+  to = "/public/search.js"
+  status = 200
+
+[[redirects]]
+  from = "/miniplayer.js"
+  to = "/public/miniplayer.js"
+  status = 200
+
+[[redirects]]
+  from = "/fullplayer.js"
+  to = "/public/fullplayer.js"
+  status = 200
+
+[[redirects]]
+  from = "/artist.js"
+  to = "/public/artist.js"
+  status = 200
+
+[[redirects]]
+  from = "/app.js"
+  to = "/public/app.js"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/public/index.html"
+  status = 200
